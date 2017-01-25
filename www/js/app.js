@@ -21,4 +21,29 @@ angular.module('AppliWithQuentin', ['ionic'])
       StatusBar.styleDefault();
     }
   });
+})
+
+.config(function ($stateProvider, $urlRouterProvider){
+  $stateProvider
+
+  .state('app', {
+    url : '/app',
+    abstract : true,
+    views : {
+      'mainView' : {
+        templateUrl : 'templates/menu.html'
+      }
+    }
+  })
+
+   .state('app.home', {
+     url : '/home',
+     views : {
+       'pageView' : {
+       templateUrl : 'templates/home.html'}
+     }
+   });
+
+  $urlRouterProvider.otherwise('/app/home');
+
 });
