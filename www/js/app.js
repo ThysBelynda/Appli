@@ -47,3 +47,4 @@ angular.module('AppliWithQuentin', ['ionic'])
   $urlRouterProvider.otherwise('/app/home');
 
 });
+
