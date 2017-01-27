@@ -58,10 +58,46 @@ angular.module('AppliWithQuentin', ['ionic'])
     url : '/search',
     views : {
       'pageView' : {
-        templateUrl : 'templates/search.html'
+        templateUrl : 'templates/search/when.html'
       }
     }
   })
+
+      .state('app.searchWhere', {
+          url : '/searchWhere',
+          views : {
+              'pageView' : {
+                  templateUrl : 'templates/search/where.html'
+              }
+          }
+      })
+
+      .state('app.searchWhat', {
+          url : '/searchWhat',
+          views : {
+              'pageView' : {
+                  templateUrl : 'templates/search/what.html'
+              }
+          }
+      })
+
+      .state('app.searchHowMany', {
+          url : '/searchHowMany',
+          views : {
+              'pageView' : {
+                  templateUrl : 'templates/search/howMany.html'
+              }
+          }
+      })
+
+      .state('app.searchResults', {
+          url : '/searchResults',
+          views : {
+              'pageView' : {
+                  templateUrl : 'templates/search/results.html'
+              }
+          }
+      })
 
   .state('app.profil', {
       url : '/profil',
