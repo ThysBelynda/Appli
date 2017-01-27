@@ -1,13 +1,60 @@
 <ion-view view-title="Votre expo dans Paris">
     <ion-content padding="true">
 
+        <div class="sous-titre">
+            <ion-toolbar>
+                <ion-title>Catalogue d'expo</ion-title>
+            </ion-toolbar>
+        </div>
+
+        <br>
+
+        <div class="filtres" align="center">
+            <button class="button button-small button-negative">painting</button>
+            <button class="button button-small button-negative">mode</button>
+            <button class="button button-small button-negative">archi</button>
+            <button class="button button-small button-negative">photo</button>
+            <button class="button button-small button-negative">sciences</button>
+            <button class="button button-small button-negative">sculpture</button>
+            <button class="button button-small button-negative">préf</button>
+        </div>
+        <br>
+        <div class="item item-input">
+            <i class="icon ion-search placeholder-icon"></i>
+            <input type="text" ng-model="eq_search.q" placeholder="Artistes, Thèmes...">
+        </div>
+
         <div class="card">
             <div class="item item-body">
-                <img src="img/ionic.png" class="full-image">
+                <img src="../img/evaandadele.jpg" class="full-image">
             </div>
 
             <div class="item item-text-wrap">
-                Choisissez le type d'expo que vous voulez voir.
+                <strong>Eva et Adele</strong>
+                <br>
+                <p>You are my biggest inspiration</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="item item-body">
+                <img src="../img/lechat.jpg" class="full-image">
+            </div>
+
+            <div class="item item-text-wrap">
+                <strong>L'art et Le Chat</strong>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="item item-body">
+                <img src="../img/OscarWilde.jpg" class="full-image">
+            </div>
+
+            <div class="item item-text-wrap">
+                <strong>Oscar Wilde</strong>
+                <br>
+                <p>L'impértinent absolu</p>
             </div>
         </div>
 
