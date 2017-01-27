@@ -1,13 +1,5 @@
-<ion-view view-title="Votre expo dans Paris">
+<ion-view view-title="Catalogue d'expo">
     <ion-content padding="true">
-
-        <div class="sous-titre">
-            <ion-toolbar>
-                <ion-title>Catalogue d'expo</ion-title>
-            </ion-toolbar>
-        </div>
-
-        <br>
 
         <div class="filtres" align="center">
             <button class="button button-small button-negative">painting</button>
@@ -47,11 +39,11 @@
         </div>
 
         <div class="card">
-            <div class="item item-body">
+            <div class="item item-body" ui-sref="app.expoDetails">
                 <img src="../img/OscarWilde.jpg" class="full-image">
             </div>
 
-            <div class="item item-text-wrap">
+            <div class="item item-text-wrap" ui-sref="app.expoDetails">
                 <strong>Oscar Wilde</strong>
                 <br>
                 <p>L'impértinent absolu</p>

@@ -42,7 +42,35 @@ angular.module('AppliWithQuentin', ['ionic'])
        'pageView' : {
        templateUrl : 'templates/home.html'}
      }
-   });
+   })
+
+
+   .state('app.expoDetails',{
+       url : '/expo/details',
+       views : {
+           'pageView' : {
+               templateUrl : 'templates/details.html'
+           }
+       }
+   })
+
+  .state('app.search', {
+    url : '/search',
+    views : {
+      'pageView' : {
+        templateUrl : 'templates/search.html'
+      }
+    }
+  })
+
+  .state('app.profil', {
+      url : '/profil',
+      views : {
+          'pageView' : {
+           templateUrl : 'templates/profil.html'
+           }
+      }
+  });
 
   $urlRouterProvider.otherwise('/app/home');
 
