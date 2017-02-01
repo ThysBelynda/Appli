@@ -32,7 +32,7 @@ angular.module('AppliWithQuentin', ['ionic'])
                 abstract : true,
                 views : {
                     'mainView' : {
-                        templateUrl : 'templates/auth/start.html'
+                        templateUrl : 'templates/auth/accueil.html'
                     }
                 }
             })
@@ -45,7 +45,25 @@ angular.module('AppliWithQuentin', ['ionic'])
                     }
                 }
             })
-                
+
+            .state('start.connexion', {
+                url : '/connexion',
+                views : {
+                    'pageView' : {
+                        templateUrl : 'templates/auth/connexion.html'
+                    }
+                }
+            })
+
+            .state('start.inscription', {
+                url : '/inscription',
+                views : {
+                    'pageView' : {
+                        templateUrl : 'templates/auth/inscription.html'
+                    }
+                }
+            })
+
 //home
             .state('app', {
                 url : '/app',
