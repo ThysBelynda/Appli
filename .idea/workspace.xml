@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="06eea86a-a761-4124-8929-96bdc5993003" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/index.html" afterPath="$PROJECT_DIR$/www/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="AppliWithQuentin.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -278,13 +278,21 @@
       <workItem from="1485854778164" duration="597000" />
       <workItem from="1485954687602" duration="37000" />
       <workItem from="1485954738748" duration="3712000" />
+<<<<<<< Updated upstream
       <workItem from="1485961314898" duration="14000" />
       <workItem from="1485961729497" duration="9000" />
+=======
+      <workItem from="1485961314898" duration="182000" />
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< Updated upstream
     <option name="totallyTimeSpent" value="21198000" />
+=======
+    <option name="totallyTimeSpent" value="21357000" />
+>>>>>>> Stashed changes
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
