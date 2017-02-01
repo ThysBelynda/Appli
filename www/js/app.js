@@ -31,7 +31,7 @@ angular.module('AppliWithQuentin', ['ionic'])
                 url : '/start',
                 abstract : true,
                 views : {
-                    'mainView' : {
+                    'startView' : {
                         templateUrl : 'templates/auth/start.html'
                     }
                 }
