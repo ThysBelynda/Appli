@@ -31,14 +31,14 @@ angular.module('AppliWithQuentin', ['ionic'])
                 url : '/start',
                 abstract : true,
                 views : {
-                    'mainView' : {
-                        templateUrl : 'templates/auth/start.html'
+                    'startView' : {
+                        templateUrl : 'templates/auth/accueil.html'
                     }
                 }
             })
 
-            .state('start.welcom', {
-                url : '/welcom',
+            .state('start.welcome', {
+                url : '/welcome',
                 views : {
                     'pageView' : {
                         templateUrl : 'templates/auth/start.html'
