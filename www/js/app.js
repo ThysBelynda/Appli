@@ -5,110 +5,130 @@
 // the 2nd parameter is an array of 'requires'
 angular.module('AppliWithQuentin', ['ionic'])
 
-.run(function($ionicPlatform) {
-  $ionicPlatform.ready(function() {
-    if(window.cordova && window.cordova.plugins.Keyboard) {
-      // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
-      // for form inputs)
-      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+    .run(function($ionicPlatform) {
+        $ionicPlatform.ready(function() {
+            if(window.cordova && window.cordova.plugins.Keyboard) {
+                // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
+                // for form inputs)
+                cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
 
-      // Don't remove this line unless you know what you are doing. It stops the viewport
-      // from snapping when text inputs are focused. Ionic handles this internally for
-      // a much nicer keyboard experience.
-      cordova.plugins.Keyboard.disableScroll(true);
-    }
-    if(window.StatusBar) {
-      StatusBar.styleDefault();
-    }
-  });
-})
+                // Don't remove this line unless you know what you are doing. It stops the viewport
+                // from snapping when text inputs are focused. Ionic handles this internally for
+                // a much nicer keyboard experience.
+                cordova.plugins.Keyboard.disableScroll(true);
+            }
+            if(window.StatusBar) {
+                StatusBar.styleDefault();
+            }
+        });
+    })
 
-.config(function ($stateProvider, $urlRouterProvider){
-  $stateProvider
+    .config(function ($stateProvider, $urlRouterProvider){
+        $stateProvider
 
-  .state('app', {
-    url : '/app',
-    abstract : true,
-    views : {
-      'mainView' : {
-        templateUrl : 'templates/menu.html'
-      }
-    }
-  })
+//page d'accueil
+            .state('start', {
+                url : '/start',
+                abstract : true,
+                views : {
+                    'mainView' : {
+                        templateUrl : 'templates/auth/start.html'
+                    }
+                }
+            })
 
-   .state('app.home', {
-     url : '/home',
-     views : {
-       'pageView' : {
-       templateUrl : 'templates/home.html'}
-     }
-   })
+            .state('start.welcom', {
+                url : '/welcom',
+                views : {
+                    'pageView' : {
+                        templateUrl : 'templates/auth/start.html'
+                    }
+                }
+            })
+                
+//home
+            .state('app', {
+                url : '/app',
+                abstract : true,
+                views : {
+                    'mainView' : {
+                        templateUrl : 'templates/menu.html'
+                    }
+                }
+            })
 
+            .state('app.home', {
+                url : '/home',
+                views : {
+                    'pageView' : {
+                        templateUrl : 'templates/home.html'}
+                }
+            })
 
-   .state('app.expoDetails',{
-       url : '/expo/details',
-       views : {
-           'pageView' : {
-               templateUrl : 'templates/details.html'
-           }
-       }
-   })
+            .state('app.expoDetails',{
+                url : '/expo/details',
+                views : {
+                    'pageView' : {
+                        templateUrl : 'templates/details.html'
+                    }
+                }
+            })
 
-  .state('app.search', {
-    url : '/search',
-    views : {
-      'pageView' : {
-        templateUrl : 'templates/search/when.html'
-      }
-    }
-  })
+            .state('app.search', {
+                url : '/search',
+                views : {
+                    'pageView' : {
+                        templateUrl : 'templates/search/when.html'
+                    }
+                }
+            })
 
-      .state('app.searchWhere', {
-          url : '/searchWhere',
-          views : {
-              'pageView' : {
-                  templateUrl : 'templates/search/where.html'
-              }
-          }
-      })
+            .state('app.searchWhere', {
+                url : '/searchWhere',
+                views : {
+                    'pageView' : {
+                        templateUrl : 'templates/search/where.html'
+                    }
+                }
+            })
 
-      .state('app.searchWhat', {
-          url : '/searchWhat',
-          views : {
-              'pageView' : {
-                  templateUrl : 'templates/search/what.html'
-              }
-          }
-      })
+            .state('app.searchWhat', {
+                url : '/searchWhat',
+                views : {
+                    'pageView' : {
+                        templateUrl : 'templates/search/what.html'
+                    }
+                }
+            })
 
-      .state('app.searchHowMany', {
-          url : '/searchHowMany',
-          views : {
-              'pageView' : {
-                  templateUrl : 'templates/search/howMany.html'
-              }
-          }
-      })
+            .state('app.searchHowMany', {
+                url : '/searchHowMany',
+                views : {
+                    'pageView' : {
+                        templateUrl : 'templates/search/howMany.html'
+                    }
+                }
+            })
 
-      .state('app.searchResults', {
-          url : '/searchResults',
-          views : {
-              'pageView' : {
-                  templateUrl : 'templates/search/results.html'
-              }
-          }
-      })
+            .state('app.searchResults', {
+                url : '/searchResults',
+                views : {
+                    'pageView' : {
+                        templateUrl : 'templates/search/results.html'
+                    }
+                }
+            })
 
-  .state('app.profil', {
-      url : '/profil',
-      views : {
-          'pageView' : {
-           templateUrl : 'templates/profil.html'
-           }
-      }
-  });
+            .state('app.profil', {
+                url : '/profil',
+                views : {
+                    'pageView' : {
+                        templateUrl : 'templates/profil.html'
+                    }
+                }
+            });
 
-  $urlRouterProvider.otherwise('/app/home');
+        $urlRouterProvider.otherwise('/app/home');
 
-});
+    });
 
