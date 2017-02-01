@@ -32,7 +32,7 @@ angular.module('AppliWithQuentin', ['ionic'])
                 abstract : true,
                 views : {
                     'mainView' : {
-                        templateUrl : 'templates/auth/accueil.html'
+                        templateUrl : 'templates/auth/start.html'
                     }
                 }
             })
