@@ -79,7 +79,7 @@ angular.module('AppliWithQuentin', ['ionic'])
                 url : '/home',
                 views : {
                     'pageView' : {
-                        templateUrl : 'templates/home.html'}
+                        templateUrl : 'templates/catalogue/home.html'}
                 }
             })
 
@@ -87,7 +87,7 @@ angular.module('AppliWithQuentin', ['ionic'])
                 url : '/expo/details',
                 views : {
                     'pageView' : {
-                        templateUrl : 'templates/details.html'
+                        templateUrl : 'templates/catalogue/details.html'
                     }
                 }
             })
@@ -141,7 +141,25 @@ angular.module('AppliWithQuentin', ['ionic'])
                 url : '/profil',
                 views : {
                     'pageView' : {
-                        templateUrl : 'templates/profil.html'
+                        templateUrl : 'templates/profil/profil.html'
+                    }
+                }
+            })
+
+            .state('app.espace', {
+                url : '/espace',
+                views : {
+                    'pageView' : {
+                        templateUrl : 'templates/profil/esp.html'
+                    }
+                }
+            })
+
+            .state('app.selection', {
+                url : '/selection',
+                views : {
+                    'pageView' : {
+                        templateUrl : 'templates/profil/selection.html'
                     }
                 }
             });
