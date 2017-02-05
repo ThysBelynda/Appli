@@ -64,6 +64,15 @@ angular.module('AppliWithQuentin', ['ionic'])
                 }
             })
 
+            .state('start.log', {
+                url : '/log',
+                views : {
+                    'pageView' : {
+                        templateUrl : 'templates/auth/log.html'
+                    }
+                }
+            })
+
 //home
             .state('app', {
                 url : '/app',
@@ -167,4 +176,37 @@ angular.module('AppliWithQuentin', ['ionic'])
         $urlRouterProvider.otherwise('/app/home');
 
     });
+
+(function() {
+    //Initialize Firebase
+
+    const config = {
+        apiKey: "AIzaSyD7aq7ORCJlIpYKUXsEGNPdANyzywEIA2o",
+        authDomain: "appliwithbely.firebaseapp.com",
+        databaseURL: "https://appliwithbely.firebaseio.com",
+        storageBucket: "appliwithbely.appspot.com",
+
+    };
+    firebase.initializeApp(config);
+
+    // Get elements
+    const txtEmail = document.getElementById('txtEmail');
+    const txtPassword = document.getElementById('txtPassword');
+    const txtLogin = document.getElementById('txtLogin');
+    const txtSignUp = document.getElementById('txtSignUp');
+    const txtLogout = document.getElementById('txtLogout');
+
+    // Bouton
+    btnLogin.addEventListener('click', e => {
+    const email = txtEmail.value;
+    const pass = txtPassword.value;
+    const auth = firebase.auth();
+    });
+
+    // Sign In
+    const promise = auth.signWithEmailAndPassword(email, pass);
+    promise.catch (e => console.log(e.message));
+
+
+}());
 

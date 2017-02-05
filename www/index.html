@@ -39,5 +39,23 @@
   <ion-nav-view name="mainView"></ion-nav-view>
 
 
+  <script src="https://www.gstatic.com/firebasejs/3.6.8/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyD7aq7ORCJlIpYKUXsEGNPdANyzywEIA2o",
+      authDomain: "appliwithbely.firebaseapp.com",
+      databaseURL: "https://appliwithbely.firebaseio.com",
+      storageBucket: "appliwithbely.appspot.com",
+      messagingSenderId: "289148484382"
+    };
+    firebase.initializeApp(config);
+
+    var bigOne = document.getElementById('bigOne');
+    var dbRef = firebase.database().ref().child('text');
+    dbRef.on('value', snap => bigOne.innerText = snap.val());
+
+  </script>
   </body>
 </html>
+
